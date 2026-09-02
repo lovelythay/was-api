@@ -15,7 +15,7 @@ import java.io.Serializable;
 public class Veiculo implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(name="placa", length = 10, nullable = false)
@@ -41,6 +41,9 @@ public class Veiculo implements Serializable {
 
     @Column(name="kilometragem", nullable = false)
     private Integer kilometragem;
+
+    @Column(name="capacidade", nullable = false)
+    private Integer capacidade;
 
     @Column(name="situacao", length = 30, nullable = false)
     private String situacao;

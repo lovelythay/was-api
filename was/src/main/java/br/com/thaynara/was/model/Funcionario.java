@@ -1,5 +1,6 @@
 package br.com.thaynara.was.model;
 
+import br.com.thaynara.was.enums.FuncionarioEnum;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,7 +18,7 @@ import java.time.LocalDate;
 public class Funcionario implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(name="nome", length = 70, nullable = false)
@@ -39,7 +40,7 @@ public class Funcionario implements Serializable {
     @Column(name="salario", precision = 10, scale = 2)
     private BigDecimal salario;
 
-    @Column(name="diario", precision = 10, scale = 2)
+    @Column(name="diaria", precision = 10, scale = 2)
     private BigDecimal diaria;
 
     @Column(name = "ativo", nullable = false)

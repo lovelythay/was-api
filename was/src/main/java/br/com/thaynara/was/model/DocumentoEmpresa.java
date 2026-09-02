@@ -16,7 +16,7 @@ import java.time.LocalDate;
 public class DocumentoEmpresa implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(name="tipo", length = 50, nullable = false)
