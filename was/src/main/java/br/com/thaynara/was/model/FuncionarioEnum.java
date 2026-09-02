@@ -1,5 +1,10 @@
 package br.com.thaynara.was.model;
 
+
+import lombok.Getter;
+
+@Getter
+
 public enum FuncionarioEnum {
     MOTORISTA("motorista"),
     MONITOR("monitor");
@@ -10,7 +15,4 @@ public enum FuncionarioEnum {
         this.cargo = cargo;
     }
 
-    public String getCargo() {
-        return cargo;
-    }
 }
