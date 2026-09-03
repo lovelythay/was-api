@@ -3,14 +3,14 @@ package br.com.thaynara.was.enums;
 import lombok.Getter;
 
 @Getter
-public enum AlunoEnum {
+public enum ServicoEnum {
 
     PREFEITURA("prefeitura"),
     PARTICULAR("particular");
 
     private final String tipo;
 
-    AlunoEnum (String tipo){
+    ServicoEnum(String tipo){
 
         this.tipo = tipo;
     }
