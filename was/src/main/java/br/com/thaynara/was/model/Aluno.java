@@ -1,6 +1,6 @@
 package br.com.thaynara.was.model;
 
-import br.com.thaynara.was.enums.AlunoEnum;
+import br.com.thaynara.was.enums.ServicoEnum;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -39,7 +39,7 @@ public class Aluno implements Serializable {
 
     @Enumerated(EnumType.STRING)
     @Column(name="tipo_aluno", nullable = false)
-    private AlunoEnum tipoAluno;
+    private ServicoEnum tipoAluno;
 
     @ManyToOne
     @JoinColumn(name="idendereco", nullable = false)
