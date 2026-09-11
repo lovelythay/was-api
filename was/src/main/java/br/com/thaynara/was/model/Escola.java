@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="escola")
@@ -24,4 +26,7 @@ public class Escola implements Serializable {
     @ManyToOne
     @JoinColumn(name="idendereco", nullable = false)
     private Endereco endereco;
+
+    @OneToMany(mappedBy = "escola")
+    private List<ContatoEscola> contato = new ArrayList<>();
 }
